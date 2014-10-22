@@ -2,20 +2,26 @@
 //  FirstViewController.swift
 //  MusicPlayer
 //
-//  Created by Ulysses Castillo on 10/21/14.
-//  Copyright (c) 2014 UACA. All rights reserved.
+//  Created by Ulysses Castillo & Francisco Ramirez on 10/21/14.
+//  Copyright (c) 2014 IMI_Apps. All rights reserved.
 //
 
 import UIKit
 import MediaPlayer
+import AVFoundation
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UITableViewDelegate {
     
-    //first
-    //second
-
+    var player:AVAudioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let songs = MPMediaQuery.songsQuery().items
+        // get songs on device
+        
+               
+        
         
     }
 

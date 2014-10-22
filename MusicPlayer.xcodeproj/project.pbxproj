@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B12CCD9B19F662D2006FB8A1 /* 04 Twelve Feet Under.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12CCD9A19F662D2006FB8A1 /* 04 Twelve Feet Under.mp3 */; };
+		B12CCD9E19F66D90006FB8A1 /* stevehitmike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B12CCD9D19F66D90006FB8A1 /* stevehitmike.jpg */; };
 		B170152D19F64DF8002A5B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B170152C19F64DF8002A5B04 /* AppDelegate.swift */; };
 		B170152F19F64DF8002A5B04 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B170152E19F64DF8002A5B04 /* FirstViewController.swift */; };
 		B170153119F64DF8002A5B04 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B170153019F64DF8002A5B04 /* SecondViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B12CCD9A19F662D2006FB8A1 /* 04 Twelve Feet Under.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "04 Twelve Feet Under.mp3"; sourceTree = "<group>"; };
+		B12CCD9D19F66D90006FB8A1 /* stevehitmike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stevehitmike.jpg; sourceTree = "<group>"; };
 		B170152719F64DF8002A5B04 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B170152B19F64DF8002A5B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B170152C19F64DF8002A5B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				B170153019F64DF8002A5B04 /* SecondViewController.swift */,
 				B170153219F64DF8002A5B04 /* Main.storyboard */,
 				B170153519F64DF8002A5B04 /* Images.xcassets */,
+				B12CCD9A19F662D2006FB8A1 /* 04 Twelve Feet Under.mp3 */,
+				B12CCD9D19F66D90006FB8A1 /* stevehitmike.jpg */,
 				B170153719F64DF8002A5B04 /* LaunchScreen.xib */,
 				B170152A19F64DF8002A5B04 /* Supporting Files */,
 			);
@@ -195,9 +201,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12CCD9E19F66D90006FB8A1 /* stevehitmike.jpg in Resources */,
 				B170153419F64DF8002A5B04 /* Main.storyboard in Resources */,
 				B170153919F64DF8002A5B04 /* LaunchScreen.xib in Resources */,
 				B170153619F64DF8002A5B04 /* Images.xcassets in Resources */,
+				B12CCD9B19F662D2006FB8A1 /* 04 Twelve Feet Under.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +417,7 @@
 				B170154A19F64DF8002A5B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B170154B19F64DF8002A5B04 /* Build configuration list for PBXNativeTarget "MusicPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +426,7 @@
 				B170154D19F64DF8002A5B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
