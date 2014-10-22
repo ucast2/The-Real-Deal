@@ -19,7 +19,6 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
         let songs = MPMediaQuery.songsQuery().items
         // get songs on device
-        
                
         
         

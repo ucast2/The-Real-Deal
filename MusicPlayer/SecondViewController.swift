@@ -59,6 +59,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let songs = MPMediaQuery.songsQuery().items
+        let mediaCollection = MPMediaItemCollection(items: songs)
+
         return count(songs)
     }
     
