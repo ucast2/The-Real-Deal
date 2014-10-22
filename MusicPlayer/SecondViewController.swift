@@ -10,13 +10,11 @@ import UIKit
 import AVFoundation
 import MediaPlayer
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
     @IBAction func Back(sender: AnyObject) {
-        
-        
-        
+
     }
     
     @IBOutlet var volumeSlider: UISlider!
