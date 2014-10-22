@@ -7,26 +7,45 @@
 //
 
 import UIKit
+import AVFoundation
+import MediaPlayer
 
 class SecondViewController: UIViewController {
+    
+
+    
+    @IBOutlet var volumeSlider: UISlider!
+    
+    @IBAction func changeVolume(sender: AnyObject) {
+        player.volume = volumeSlider.value
+    
+    
+    }
+
 
     var player:AVAudioPlayer = AVAudioPlayer()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let songs = MPMediaQuery.songsQuery().items
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         var fileLoc = NSString(string: NSBundle.mainBundle().pathForResource("04 Twelve Feet Under", ofType: "mp3")!).stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         
         var error : NSError? = nil
         player = AVAudioPlayer(contentsOfURL: NSURL(string: fileLoc), error: &error)
         
-        
+        volumeSlider.value = 1
+        player.volume = 1
         player.play()
-        player.voulme = volumeSlider.value
-
+        
+      
         
         
     }
-    @IBOutlet var volumeSlider: UISlider!
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
