@@ -22,22 +22,32 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func changeVolume(sender: AnyObject) {
         player.volume = volumeSlider.value
     
-    
     }
-
-
     var player:AVAudioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+//////////////////////////////////////MPMEDIAQUERY+PLAYER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         let songs = MPMediaQuery.songsQuery().items
         
+        let mediaCollection = MPMediaItemCollection(items: songs)
+        
+        let playerMP = MPMusicPlayerController.iPodMusicPlayer()
+        
+        playerMP.setQueueWithItemCollection(mediaCollection)
+        
+        playerMP.play()
         
         
-        // Do any additional setup after loading the view, typically from a nib.
+
+        
+//////////////////////////////////////AVAUDIIOPLAYER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         var fileLoc = NSString(string: NSBundle.mainBundle().pathForResource("04 Twelve Feet Under", ofType: "mp3")!).stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         
         var error : NSError? = nil
+        
         player = AVAudioPlayer(contentsOfURL: NSURL(string: fileLoc), error: &error)
         
         volumeSlider.value = 1
@@ -48,6 +58,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let songs = MPMediaQuery.songsQuery().items
         return count(songs)
     }
     
