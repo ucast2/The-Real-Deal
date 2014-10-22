@@ -8,21 +8,33 @@
 
 import UIKit
 import MediaPlayer
-import AVFoundation
 
-class FirstViewController: UIViewController, UITableViewDelegate {
-    
-    var player:AVAudioPlayer = AVAudioPlayer()
-    
+
+class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let songs = MPMediaQuery.songsQuery().items
-        // get songs on device
-               
+
         
         
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        
+        
+        return songs.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell?")
+        cell.textLabel.text = "Hello Universe"
+       
+        
+        return cell
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

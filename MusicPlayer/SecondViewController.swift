@@ -7,76 +7,31 @@
 //
 
 import UIKit
-import AVFoundation
 import MediaPlayer
 
-class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
 
-    @IBAction func Back(sender: AnyObject) {
-
-    }
+var songs = MPMediaQuery.songsQuery().items as NSArray
+class SecondViewController: UIViewController {
     
+    
+    
+    @IBAction func Back(sender: AnyObject) {}
     @IBOutlet var volumeSlider: UISlider!
-    
-    @IBAction func changeVolume(sender: AnyObject) {
-        player.volume = volumeSlider.value
-    
-    }
-    var player:AVAudioPlayer = AVAudioPlayer()
-    
+////////////////////////////////////// MPMEDIAQUERY+PLAYER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-//////////////////////////////////////MPMEDIAQUERY+PLAYER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        let songs = MPMediaQuery.songsQuery().items
-        
         let mediaCollection = MPMediaItemCollection(items: songs)
-        
         let playerMP = MPMusicPlayerController.iPodMusicPlayer()
-        
         playerMP.setQueueWithItemCollection(mediaCollection)
-        
         playerMP.play()
         
-        
-
-        
-//////////////////////////////////////AVAUDIIOPLAYER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        var fileLoc = NSString(string: NSBundle.mainBundle().pathForResource("04 Twelve Feet Under", ofType: "mp3")!).stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-        
-        var error : NSError? = nil
-        
-        player = AVAudioPlayer(contentsOfURL: NSURL(string: fileLoc), error: &error)
-        
-        volumeSlider.value = 1
-        player.volume = 1
-        player.play()
+        println(songs[0])
         
     }
    
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let songs = MPMediaQuery.songsQuery().items
-        let mediaCollection = MPMediaItemCollection(items: songs)
 
-        return count(songs)
-    }
     
-   
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell?")
-        
-        cell.textLabel?.text = songs[indexPath.row]
-        
-        return cell
-
-        
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
