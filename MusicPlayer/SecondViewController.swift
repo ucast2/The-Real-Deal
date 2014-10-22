@@ -13,6 +13,11 @@ import MediaPlayer
 class SecondViewController: UIViewController {
     
 
+    @IBAction func Back(sender: AnyObject) {
+        
+        
+        
+    }
     
     @IBOutlet var volumeSlider: UISlider!
     

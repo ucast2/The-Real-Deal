@@ -69,7 +69,11 @@
                                 <items>
                                     <navigationItem id="LUD-nd-2ZA">
                                         <nil key="title"/>
-                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="iwY-QU-V5H"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="iwY-QU-V5H">
+                                            <connections>
+                                                <action selector="Back:" destination="8rJ-Kc-sve" id="s3Y-Vy-d0P"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
