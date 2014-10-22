@@ -44,11 +44,25 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         player.volume = 1
         player.play()
         
-      
-        
-        
     }
    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return count(songs)
+    }
+    
+   
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell?")
+        
+        cell.textLabel?.text = songs[indexPath.row]
+        
+        return cell
+
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
