@@ -15,8 +15,8 @@ class SecondViewController: UIViewController {
     
     
     
-    @IBAction func Back(sender: AnyObject) {}
-    @IBOutlet var volumeSlider: UISlider!
+//    @IBAction func Back(sender: AnyObject) {}
+//   @IBOutlet var volumeSlider: UISlider!
 ////////////////////////////////////// MPMEDIAQUERY+PLAYER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,9 @@ class SecondViewController: UIViewController {
         playerMP.setQueueWithItemCollection(mediaCollection)
         playerMP.play()
         
-        println(songs[0])
+//        println(songs[0])
         
+//        let MPMediaItemPropertyBeatsPerMinute: NSString!
     }
    
 

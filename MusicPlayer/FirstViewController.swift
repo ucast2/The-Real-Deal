@@ -20,8 +20,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        
-        
         return songs.count
     }
     
@@ -29,8 +27,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell?")
         cell.textLabel.text = "Hello Universe"
-       
-        
         return cell
         
     }
