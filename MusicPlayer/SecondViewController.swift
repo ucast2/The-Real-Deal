@@ -10,7 +10,7 @@ import UIKit
 import MediaPlayer
 
 
-var songs = MPMediaQuery.songsQuery().items as NSArray
+
 class SecondViewController: UIViewController {
     
     
@@ -21,10 +21,12 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let songs = MPMediaQuery.songsQuery().items as NSArray
         let mediaCollection = MPMediaItemCollection(items: songs)
         let playerMP = MPMusicPlayerController.iPodMusicPlayer()
         playerMP.setQueueWithItemCollection(mediaCollection)
         playerMP.play()
+    
         
 //        println(songs[0])
         
