@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -61,11 +61,7 @@
                                 <items>
                                     <navigationItem id="LUD-nd-2ZA">
                                         <nil key="title"/>
-                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="iwY-QU-V5H">
-                                            <connections>
-                                                <action selector="Back:" destination="8rJ-Kc-sve" id="s3Y-Vy-d0P"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="iwY-QU-V5H"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -74,18 +70,12 @@
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PcQ-tV-dy8">
                                 <rect key="frame" x="60" y="527" width="254" height="31"/>
-                                <connections>
-                                    <action selector="changeVolume:" destination="8rJ-Kc-sve" eventType="valueChanged" id="nNO-HP-HGf"/>
-                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Now Playing" image="second" id="cPa-gy-q4n"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="volumeSlider" destination="PcQ-tV-dy8" id="ytY-qM-kQe"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
