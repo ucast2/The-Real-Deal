@@ -21,12 +21,13 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if MPMediaQuery.songsQuery().items.count != 0 {
         let songs = MPMediaQuery.songsQuery().items
         let mediaCollection = MPMediaItemCollection(items: songs)
         let playerMP = MPMusicPlayerController.iPodMusicPlayer()
         playerMP.setQueueWithItemCollection(mediaCollection)
         playerMP.play()
-    
+        }
         
 //        println(songs[0])
         
