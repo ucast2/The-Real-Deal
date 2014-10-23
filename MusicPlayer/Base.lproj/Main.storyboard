@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -24,8 +24,8 @@
                                 <color key="backgroundColor" red="0.29372141827779458" green="0.29786448435593849" blue="0.30112655386740328" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.27350224447513816" green="0.25062830736080571" blue="0.25946647064186662" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="pnn-pR-XoH"/>
-                                    <outlet property="delegate" destination="9pv-A4-QxB" id="eZT-lG-VCF"/>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="MJk-kl-KjU"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="BfH-AC-6kG"/>
                                 </connections>
                             </tableView>
                         </subviews>

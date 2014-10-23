@@ -9,16 +9,31 @@
 import UIKit
 import MediaPlayer
 
+var numberOfSongs = 10
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if MPMediaQuery.songsQuery().items.count != 0 {
+            let songs = MPMediaQuery.songsQuery().items
+            let mediaCollection = MPMediaItemCollection(items: songs)
+            let playerMP = MPMusicPlayerController.iPodMusicPlayer()
+            playerMP.setQueueWithItemCollection(mediaCollection)
+            playerMP.play()
+            numberOfSongs = 0
+            for song in songs {
+                numberOfSongs++
+            }
+        }
+        //        let MPMediaItemPropertyBeatsPerMinute: NSString!
+
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return 67
+        return numberOfSongs
     
     }
     
@@ -27,7 +42,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell?")
         cell.textLabel.text = "Hello Universe"
         return cell
-        
     }
 
 
