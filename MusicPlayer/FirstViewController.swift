@@ -10,6 +10,7 @@ import UIKit
 import MediaPlayer
 
 var numberOfSongs = 10
+var songsArray = [AnyObject]()
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
@@ -23,11 +24,33 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             playerMP.play()
             numberOfSongs = 0
             for song in songs {
+                var songTitle: AnyObject! = song.valueForProperty(MPMediaItemPropertyTitle)
                 numberOfSongs++
+                songsArray.append(songTitle)
             }
-        }
-        //        let MPMediaItemPropertyBeatsPerMinute: NSString!
+            
+            
+            
+            
+//            self.currentSongname = currentItem.valueForProperty.MPMediaItemPropertyTitle
+//            let MPMediaItemPropertyBeatsPerMinute: NSString!
+            
+            
+//            NSLog(@"Logging items from a generic query...");
+//            NSArray *itemsFromGenericQuery = [everything items];
+//            for (MPMediaItem *song in itemsFromGenericQuery) {
+//                NSString *songTitle = [song valueForProperty: MPMediaItemPropertyTitle];
+//                NSLog (@"%@", songTitle);}
+            
+            
+            
+           
+            
+            
 
+
+        }
+      
         
     }
     
@@ -38,9 +61,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    
-        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell?")
-        cell.textLabel.text = "Hello Universe"
+         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell?")
+        if songsArray.count != 0 {
+            cell.textLabel.text = songsArray[indexPath.row] as? String
+        } else {
+            cell.textLabel.text = "Hello Universe"
+        }
         return cell
     }
 
