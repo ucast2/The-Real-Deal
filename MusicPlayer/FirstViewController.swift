@@ -11,9 +11,9 @@ import MediaPlayer
 
 var numberOfSongs = 10
 var songsArray = [AnyObject]()
-var artworkArray = [AnyObject?]()
+var artworkArray = [MPMediaItemArtwork?]()
 var artistArray = [AnyObject?]()
-var artwork = MPMediaItemArtwork()
+
 
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -30,7 +30,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             for song in songs {
                 var songTitle: AnyObject! = song.valueForProperty(MPMediaItemPropertyTitle)
                     // works fine
-                artwork = song.valueForProperty(MPMediaItemPropertyArtwork) as MPMediaItemArtwork
+                var artwork = song.valueForProperty(MPMediaItemPropertyArtwork) as MPMediaItemArtwork
                     // returns some image information
                 var artist: AnyObject! = song.valueForProperty(MPMediaItemPropertyArtist)
                 
@@ -74,7 +74,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             var strArtists = artistArray[indexPath.row] as? String
             cell.textLabel.text = strSongs! + " | " + strArtists!
             //UIImagePickerControllerMediaMetadata | might be useful for album cover
-            cell.imageView.image = artwork.imageWithSize(CGSizeMake(30, 30))
+            
+            cell.imageView.image = artworkArray[indexPath.row]!.imageWithSize(CGSizeMake(30, 30))
         } else {
             cell.textLabel.text = "Hello Universe"
         }
