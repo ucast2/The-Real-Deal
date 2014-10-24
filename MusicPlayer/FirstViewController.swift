@@ -11,7 +11,7 @@ import MediaPlayer
 
 var numberOfSongs = 10
 var songsArray = [AnyObject]()
-var bpmArray = [AnyObject?]()
+var artworkArray = [AnyObject?]()
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
@@ -26,12 +26,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             numberOfSongs = 0
             for song in songs {
                 var songTitle: AnyObject! = song.valueForProperty(MPMediaItemPropertyTitle)
-                var bpm: AnyObject! = song.valueForProperty(MPMediaItemPropertyBeatsPerMinute)
+                var artwork: AnyObject! = song.valueForProperty(MPMediaItemPropertyArtwork)
                 numberOfSongs++
                 songsArray.append(songTitle)
-                bpmArray.append(bpm)
+                artworkArray.append(artwork)
             }
-            println(bpmArray)
+            println(artworkArray)
             
             
             
