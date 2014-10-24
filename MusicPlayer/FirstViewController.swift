@@ -64,7 +64,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
          var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell?")
         if songsArray.count != 0 {
-            cell.textLabel.text = songsArray[indexPath.row] as? String
+            var strSongs = songsArray[indexPath.row] as? String
+            var strArtists = artistArray[indexPath.row] as? String
+            cell.textLabel.text = strSongs! + strArtists!
         } else {
             cell.textLabel.text = "Hello Universe"
         }
