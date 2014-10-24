@@ -13,19 +13,18 @@ var numberOfSongs = 10
 var songsArray = [AnyObject]()
 var artworkArray = [MPMediaItemArtwork?]()
 var artistArray = [AnyObject?]()
+var currentSong: AnyObject? = AnyObject?()
 
 
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        println(currentSong)
         if MPMediaQuery.songsQuery().items.count != 0 {
             let songs = MPMediaQuery.songsQuery().items
-            let mediaCollection = MPMediaItemCollection(items: songs)
-            let playerMP = MPMusicPlayerController.iPodMusicPlayer()
-            playerMP.setQueueWithItemCollection(mediaCollection)
-            playerMP.play()
+            playNow()
             numberOfSongs = 0
             for song in songs {
                 var songTitle: AnyObject! = song.valueForProperty(MPMediaItemPropertyTitle)
@@ -74,14 +73,30 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             var strArtists = artistArray[indexPath.row] as? String
             cell.textLabel.text = strSongs! + " | " + strArtists!
             //UIImagePickerControllerMediaMetadata | might be useful for album cover
-            
             cell.imageView.image = artworkArray[indexPath.row]!.imageWithSize(CGSizeMake(30, 30))
         } else {
             cell.textLabel.text = "Hello Universe"
         }
         return cell
     }
+    
+    func tableView(tableView: UITableView!,willSelectRowAtIndexPath indexPath: NSIndexPath!) -> NSIndexPath! {
+        currentSong = songsArray[indexPath.row]
+        playNow()
+        return indexPath
+    }
 
+    
+    
+
+    
+    
+//    func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
+//        // #warning Potentially incomplete method implementation.
+//        // Return the number of sections.
+//        return 2
+//    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

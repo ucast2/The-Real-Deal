@@ -16,6 +16,7 @@
 		B170153619F64DF8002A5B04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B170153519F64DF8002A5B04 /* Images.xcassets */; };
 		B170153919F64DF8002A5B04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B170153719F64DF8002A5B04 /* LaunchScreen.xib */; };
 		B170154519F64DF8002A5B04 /* MusicPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B170154419F64DF8002A5B04 /* MusicPlayerTests.swift */; };
+		B1A7DC9E19FA2CD600A94212 /* globalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A7DC9D19FA2CD500A94212 /* globalFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		B170153E19F64DF8002A5B04 /* MusicPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B170154319F64DF8002A5B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B170154419F64DF8002A5B04 /* MusicPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerTests.swift; sourceTree = "<group>"; };
+		B1A7DC9D19FA2CD500A94212 /* globalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = globalFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				B170152C19F64DF8002A5B04 /* AppDelegate.swift */,
 				B170152E19F64DF8002A5B04 /* FirstViewController.swift */,
+				B1A7DC9D19FA2CD500A94212 /* globalFunctions.swift */,
 				B170153019F64DF8002A5B04 /* SecondViewController.swift */,
 				B170153219F64DF8002A5B04 /* Main.storyboard */,
 				B170153519F64DF8002A5B04 /* Images.xcassets */,
@@ -227,6 +230,7 @@
 			files = (
 				B170153119F64DF8002A5B04 /* SecondViewController.swift in Sources */,
 				B170152D19F64DF8002A5B04 /* AppDelegate.swift in Sources */,
+				B1A7DC9E19FA2CD600A94212 /* globalFunctions.swift in Sources */,
 				B170152F19F64DF8002A5B04 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
