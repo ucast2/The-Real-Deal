@@ -14,6 +14,7 @@ var songsArray = [AnyObject]()
 var artworkArray = [MPMediaItemArtwork?]()
 var artistArray = [AnyObject?]()
 var currentSong: AnyObject? = AnyObject?()
+var itemsArray = [AnyObject]()
 
 
 
@@ -37,6 +38,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 songsArray.append(songTitle)
                 artworkArray.append(artwork)
                 artistArray.append(artist)
+                itemsArray.append(song)
+                
             }
 
 //            MPMediaItemArtwork *artWork = [mItem valueForProperty:MPMediaItemPropertyArtwork];
@@ -81,7 +84,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView!,willSelectRowAtIndexPath indexPath: NSIndexPath!) -> NSIndexPath! {
-        currentSong = songsArray[indexPath.row]
+        currentSong = itemsArray[indexPath.row]
         playNow()
         return indexPath
     }
