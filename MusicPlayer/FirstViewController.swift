@@ -22,7 +22,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println(currentSong)
         if MPMediaQuery.songsQuery().items.count != 0 {
             let songs = MPMediaQuery.songsQuery().items
             playNow()
@@ -104,6 +103,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        playerMP.skipToNextItem()
     }
 
 

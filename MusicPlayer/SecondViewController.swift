@@ -16,11 +16,7 @@ class SecondViewController: UIViewController {
     
 
     @IBOutlet var albumCover: UIImageView!
-    
-    
-    
-
-    
+       
     override func viewDidLoad() {
         super.viewDidLoad()
 
