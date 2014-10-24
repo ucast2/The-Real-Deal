@@ -70,6 +70,9 @@
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="b95-N7-QBH">
                                 <rect key="frame" x="60" y="506" width="254" height="31"/>
+                                <connections>
+                                    <action selector="volumeSliderChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="kq0-c3-TtV"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -78,6 +81,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="albumCover" destination="m6F-Eo-TvM" id="FWU-KT-sqG"/>
+                        <outlet property="volumeSlider" destination="b95-N7-QBH" id="4gv-Fo-1G2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
