@@ -11,7 +11,7 @@ import MediaPlayer
 
 var numberOfSongs = 10
 var songsArray = [AnyObject]()
-var bpmArray = [AnyObject]()
+var bpmArray = [AnyObject?]()
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
