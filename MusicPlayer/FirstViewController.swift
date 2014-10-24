@@ -12,7 +12,7 @@ import MediaPlayer
 var numberOfSongs = 10
 var songsArray = [AnyObject]()
 var artworkArray = [AnyObject?]()
-
+var artistArray = [AnyObject?]()
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +26,17 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             numberOfSongs = 0
             for song in songs {
                 var songTitle: AnyObject! = song.valueForProperty(MPMediaItemPropertyTitle)
+                    // works fine
                 var artwork: AnyObject! = song.valueForProperty(MPMediaItemPropertyArtwork)
+                    // returns some image information
+                var artist: AnyObject! = song.valueForProperty(MPMediaItemPropertyArtist)
+                
                 numberOfSongs++
                 songsArray.append(songTitle)
                 artworkArray.append(artwork)
+                artistArray.append(artist)
             }
-            println(artworkArray)
+            println(artistArray)
             
             
             
@@ -44,13 +49,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //            for (MPMediaItem *song in itemsFromGenericQuery) {
 //                NSString *songTitle = [song valueForProperty: MPMediaItemPropertyTitle];
 //                NSLog (@"%@", songTitle);}
-            
-            
-            
-           
-            
-            
-
 
         }
       
