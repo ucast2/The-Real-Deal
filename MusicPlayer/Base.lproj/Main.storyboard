@@ -65,9 +65,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stevehitmike.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qEY-al-wWZ">
-                                <rect key="frame" x="31" y="112" width="312" height="324"/>
-                            </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PcQ-tV-dy8">
                                 <rect key="frame" x="60" y="527" width="254" height="31"/>
                             </slider>
@@ -105,6 +102,5 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
-        <image name="stevehitmike.jpg" width="170" height="170"/>
     </resources>
 </document>
