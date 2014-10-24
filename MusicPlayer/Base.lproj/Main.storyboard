@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Songs-->
@@ -53,11 +54,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bok-JR-F6f">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bok-JR-F6f">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                                 <items>
                                     <navigationItem id="LUD-nd-2ZA">
                                         <nil key="title"/>
@@ -65,20 +66,36 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stevehitmike.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="m6F-Eo-TvM">
+                            <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="stevehitmike.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="m6F-Eo-TvM">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m6F-Eo-TvM" secondAttribute="height" multiplier="375:554" id="g6S-b1-oas"/>
+                                </constraints>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="b95-N7-QBH">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="b95-N7-QBH">
                                 <rect key="frame" x="60" y="506" width="254" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8aW-mh-aYv"/>
+                                    <constraint firstAttribute="width" constant="250" id="RL8-1F-Kdj"/>
+                                </constraints>
                                 <connections>
                                     <action selector="volumeSliderChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="kq0-c3-TtV"/>
                                 </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="m6F-Eo-TvM" secondAttribute="trailing" id="5hM-xr-t4R"/>
+                            <constraint firstItem="m6F-Eo-TvM" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Bnm-b1-FV1"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="b95-N7-QBH" secondAttribute="bottom" constant="100" id="PC9-aA-9zO"/>
+                            <constraint firstItem="Bok-JR-F6f" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Pg1-ek-JOM" userLabel="menu left"/>
+                            <constraint firstItem="Bok-JR-F6f" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="QXN-KZ-fFD" userLabel="menu vertical"/>
+                            <constraint firstAttribute="centerX" secondItem="b95-N7-QBH" secondAttribute="centerX" id="ZkN-TC-W1T"/>
+                            <constraint firstAttribute="trailing" secondItem="Bok-JR-F6f" secondAttribute="trailing" id="xwr-vB-820" userLabel="menu right"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Now Playing" image="second" id="cPa-gy-q4n"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="albumCover" destination="m6F-Eo-TvM" id="FWU-KT-sqG"/>
                         <outlet property="volumeSlider" destination="b95-N7-QBH" id="4gv-Fo-1G2"/>
