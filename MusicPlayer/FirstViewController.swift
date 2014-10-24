@@ -36,7 +36,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 artworkArray.append(artwork)
                 artistArray.append(artist)
             }
-            println(artistArray)
+
             
             
             
@@ -66,7 +66,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if songsArray.count != 0 {
             var strSongs = songsArray[indexPath.row] as? String
             var strArtists = artistArray[indexPath.row] as? String
-            cell.textLabel.text = strSongs! + " " + strArtists!
+            cell.textLabel.text = strSongs! + " | " + strArtists!
         } else {
             cell.textLabel.text = "Hello Universe"
         }
