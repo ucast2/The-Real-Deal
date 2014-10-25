@@ -14,11 +14,6 @@ import MediaPlayer
 
 class SecondViewController: UIViewController {
     
-
-
-    
-//    playerMP.MPVolumeView
-    
     
     @IBAction func playButtonPressed(sender: AnyObject) {
         playerMP.play()

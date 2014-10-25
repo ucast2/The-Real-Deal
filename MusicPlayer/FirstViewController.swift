@@ -94,16 +94,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return indexPath
     }
 
-    
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        if segue!.identifier == "nowPlayingSegue" {
+            println("Wassup")
+        }
+    }
     
 
     
     
-//    func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
-//        // #warning Potentially incomplete method implementation.
-//        // Return the number of sections.
-//        return 3
-//    }
     
 
     override func didReceiveMemoryWarning() {
