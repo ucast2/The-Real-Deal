@@ -98,6 +98,9 @@
                                     <action selector="nextButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="50w-xT-3dT"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bWr-LU-ahf">
+                                <rect key="frame" x="62" y="144" width="250" height="250"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -115,6 +118,9 @@
                     <tabBarItem key="tabBarItem" title="Now Playing" image="second" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="jQD-TU-HFs"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="artworkImageView" destination="bWr-LU-ahf" id="maO-Nr-Iqd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,6 +171,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tsc-mf-675"/>
+        <segue reference="lzU-1b-eKA"/>
     </inferredMetricsTieBreakers>
 </document>

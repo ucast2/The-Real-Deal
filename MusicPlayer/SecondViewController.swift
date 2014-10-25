@@ -32,6 +32,8 @@ class SecondViewController: UIViewController {
         playerMP.skipToNextItem()
     }
     
+    @IBOutlet weak var artworkImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
