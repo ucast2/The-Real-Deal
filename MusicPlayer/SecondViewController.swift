@@ -14,14 +14,23 @@ import MediaPlayer
 
 class SecondViewController: UIViewController {
     
-    @IBOutlet var volumeSlider: UISlider!
-    @IBAction func volumeSliderChanged(sender: AnyObject) {
+
+
     
 //    playerMP.MPVolumeView
     
+    
+    @IBAction func playButtonPressed(sender: AnyObject) {
+        playerMP.play()
     }
 
-    @IBOutlet var albumCover: UIImageView!
+    @IBAction func pauseButtonPressed(sender: AnyObject) {
+        playerMP.pause()
+    }
+
+    @IBAction func nextButtonPressed(sender: AnyObject) {
+        playerMP.skipToNextItem()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

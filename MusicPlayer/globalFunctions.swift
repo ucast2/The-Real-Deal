@@ -11,8 +11,9 @@ import MediaPlayer
 
 var playerMP = MPMusicPlayerController()
 
+
 func playNow() {
-    if MPMediaQuery.songsQuery().items.count != 0 {
+    if MPMediaQuery.genresQuery().items.count != 0 {
         let songs = MPMediaQuery.songsQuery().items
         let mediaCollection = MPMediaItemCollection(items: songs)
         playerMP = MPMusicPlayerController.iPodMusicPlayer()
@@ -25,4 +26,3 @@ func playNow() {
         
     }
 }
-

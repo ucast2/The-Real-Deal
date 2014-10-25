@@ -15,6 +15,7 @@ var artworkArray = [MPMediaItemArtwork?]()
 var artistArray = [AnyObject?]()
 var currentSong: AnyObject? = AnyObject?()
 var itemsArray = [AnyObject]()
+var skip = false
 
 
 
@@ -22,11 +23,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if MPMediaQuery.songsQuery().items.count != 0 {
-            let songs = MPMediaQuery.songsQuery().items
-            playNow()
+//        if MPMediaQuery.artistsQuery().items.count != 0 {
+//            let songs = MPMediaQuery.songsQuery().items
             numberOfSongs = 0
-            for song in songs {
+            for song in MPMediaQuery.songsQuery().items {
                 var songTitle: AnyObject! = song.valueForProperty(MPMediaItemPropertyTitle)
                     // works fine
                 var artwork = song.valueForProperty(MPMediaItemPropertyArtwork) as MPMediaItemArtwork
@@ -39,7 +39,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 artistArray.append(artist)
                 itemsArray.append(song)
                 
-            }
+//            }
 
 //            MPMediaItemArtwork *artWork = [mItem valueForProperty:MPMediaItemPropertyArtwork];
 //            
@@ -82,6 +82,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        self.performSegueWithIdentifier("nowPlayingSegue", sender: indexPath)
+        
+    }
+
     func tableView(tableView: UITableView!,willSelectRowAtIndexPath indexPath: NSIndexPath!) -> NSIndexPath! {
         currentSong = itemsArray[indexPath.row]
         playNow()
@@ -96,7 +102,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //    func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
 //        // #warning Potentially incomplete method implementation.
 //        // Return the number of sections.
-//        return 2
+//        return 3
 //    }
     
 
